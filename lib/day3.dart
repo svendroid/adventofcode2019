@@ -4,7 +4,7 @@ import 'dart:math';
 class Day3 {
   final size;
   final grid;
-  int minDistance = null;
+  int minDistance;
   final Point center;
 
   static final int charDot = '.'.codeUnits.first;
@@ -70,7 +70,7 @@ class Day3 {
   int part2(List<String> wires) {
     part1(wires);
     countSteps(wires);
-    int minSteps = null;
+    int minSteps;
 
     counts.forEach((key, value) => (){
       if(minSteps == null){
